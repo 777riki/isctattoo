@@ -1,9 +1,8 @@
-.hover-card:hover {
-    transform: translateY(-10px);
-    transition: all 0.3s ease-in-out;
-}
-
 .social-icon:hover {
     color: #f0cd01 !important;
     transition: color 0.5s;
+}
+
+.card {
+    border: none;
 }
