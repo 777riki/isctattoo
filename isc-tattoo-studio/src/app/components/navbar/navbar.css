@@ -2,3 +2,8 @@ nav {
     background-color: #f0cd01;
     min-height: 10vh;
 }
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}

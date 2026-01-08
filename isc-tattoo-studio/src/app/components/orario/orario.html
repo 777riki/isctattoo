@@ -1,1 +1,73 @@
-<p>orario works!</p>
+<div class="container py-5 my-5 d-flex justify-content-center align-content-center" style="min-height: 80vh; flex-direction: column;">
+
+  <!-- Titolo e badge -->
+  <div class="text-center mb-4">
+    <h1 class="fw-bold montserrat-bold">Orari di apertura</h1>
+    <span class="badge lato-regular px-3 py-2" [class]="openNow() ? 'bg-success' : 'bg-danger'">
+      Ora siamo {{ openNow() ? 'APERTI, vieni a trovarci!' : 'CHIUSI :(' }}
+    </span>
+  </div>
+
+  <!-- Tabella orari -->
+  <div class="row justify-content-center mt-5 w-100">
+    <div class="col-12 col-sm-10 col-md-8">
+
+      <div class="table-responsive">
+        <table class="table text-center mb-0">
+          <tbody>
+            <tr>
+              <th class="text-start px-4 py-2 bg-transparent lato-regular">Lunedì</th>
+              <td class="text-end px-4 py-2 bg-transparent lato-regular">
+                Mattina chiuso<br>
+                15:00 - 18:30
+              </td>
+            </tr>
+            <tr>
+              <th class="text-start px-4 py-2 bg-transparent lato-regular">Martedì</th>
+              <td class="text-end px-4 py-2 bg-transparent lato-regular">
+                10:00 - 12:00<br>
+                15:00 - 18:30
+              </td>
+            </tr>
+            <tr>
+              <th class="text-start px-4 py-2 bg-transparent lato-regular">Mercoledì</th>
+              <td class="text-end px-4 py-2 bg-transparent lato-regular">
+                10:00 - 12:00<br>
+                15:00 - 18:30
+              </td>
+            </tr>
+            <tr>
+              <th class="text-start px-4 py-2 bg-transparent lato-regular">Giovedì</th>
+              <td class="text-end px-4 py-2 bg-transparent lato-regular">
+                10:00 - 12:00<br>
+                15:00 - 18:30
+              </td>
+            </tr>
+            <tr>
+              <th class="text-start px-4 py-2 bg-transparent lato-regular">Venerdì</th>
+              <td class="text-end px-4 py-2 bg-transparent lato-regular">
+                Mattina chiuso<br>
+                15:00 - 18:30
+              </td>
+            </tr>
+            <tr>
+              <th class="text-start px-4 py-2 bg-transparent lato-regular">Sabato</th>
+              <td class="text-end px-4 py-2 bg-transparent lato-regular">
+                09:00 - 12:00<br>
+                Pomeriggio su appuntamento
+              </td>
+            </tr>
+            <tr>
+              <th class="text-start px-4 py-2 bg-transparent lato-regular">Domenica</th>
+              <td class="text-end px-4 py-2 bg-transparent lato-regular">
+                Chiuso tutto il giorno
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+</div>

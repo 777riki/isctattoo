@@ -1,0 +1,18 @@
+.form-focus:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #f0cd01;
+  background-color: #f5f5f5; 
+}
+
+input.form-control,
+textarea.form-control,
+select.form-select {
+  background-color: #f5f5f5;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .card-body {
+    padding: 1.5rem;
+  }
+}

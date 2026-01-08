@@ -1,1 +1,79 @@
-<p>prenotazioni works!</p>
+<div class="container py-5 my-5 d-flex justify-content-center align-content-center" style="min-height: 80vh; flex-direction: column;">
+  <!-- Titolo e descrizione -->
+  <div class="text-center mb-5">
+    <h1 class="fw-bold montserrat-bold">Invia una richiesta preventivo</h1>
+    <p class="lato-regular">Compila il form qui sotto per richiedere un preventivo. Ti risponderemo al più presto!</p>
+  </div>
+
+  <!-- Form card -->
+  <div class="d-flex justify-content-center">
+    <div class="card shadow-lg border-0 rounded-4" style="max-width: 800px; width: 100%; background-color: #f5f5f5;">
+      <div class="card-body p-4">
+
+        <form (ngSubmit)="sendEmail()">
+
+          <!-- Nome -->
+          <div class="mb-3">
+            <label for="name" class="form-label lato-regular">Nome</label>
+            <input type="text" class="form-control lato-regular form-focus" id="name" [(ngModel)]="name" name="name" placeholder="Il tuo nome" required>
+          </div>
+
+          <!-- Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label lato-regular">Email</label>
+            <input type="email" class="form-control lato-regular form-focus" id="email" [(ngModel)]="email" name="email" placeholder="La tua email" required>
+          </div>
+
+          <!-- Telefono -->
+          <div class="mb-3">
+            <label for="phone" class="form-label lato-regular">Telefono</label>
+            <input type="tel" class="form-control lato-regular form-focus" id="phone" [(ngModel)]="phone" name="phone" placeholder="Il tuo numero di telefono" required>
+          </div>
+
+          <!-- Dimensione tatuaggio -->
+          <div class="mb-3">
+            <label for="dimension" class="form-label lato-regular">Dimensione del tatuaggio</label>
+            <select class="form-select lato-regular form-focus" id="dimension" [(ngModel)]="dimension" name="dimension" required>
+              <option value="" disabled selected>Seleziona dimensione</option>
+              <option value="Piccolo">Piccolo</option>
+              <option value="Medio">Medio</option>
+              <option value="Grande">Grande</option>
+              <option value="Extra-large">Extra-large</option>
+            </select>
+          </div>
+
+          <!-- Posizione tatuaggio -->
+          <div class="mb-3">
+            <label for="position" class="form-label lato-regular">Posizione sul corpo</label>
+            <select class="form-select lato-regular form-focus" id="position" [(ngModel)]="position" name="position" required>
+              <option value="" disabled selected>Seleziona posizione</option>
+              <option value="Braccio">Braccio</option>
+              <option value="Gamba">Gamba</option>
+              <option value="Petto">Petto</option>
+              <option value="Schiena">Schiena</option>
+              <option value="Collo">Collo</option>
+              <option value="Altro">Altro</option>
+            </select>
+          </div>
+
+          <!-- Note opzionali -->
+          <div class="mb-4">
+            <label for="notes" class="form-label lato-regular">Note (allergie, preferenze…)</label>
+            <textarea class="form-control lato-regular form-focus" id="notes" [(ngModel)]="notes" name="notes" rows="4" placeholder="Inserisci eventuali note"></textarea>
+          </div>
+
+          <!-- Bottone invio -->
+          <button type="submit" class="btn w-100 shadow-lg lato-regular" style="height: 50px; background-color: #f0cd01;">
+            <i class="mx-1 bi bi-send-fill"></i> <span>Invia richiesta</span>
+          </button>
+
+        </form>
+
+        <p class="text-center mt-4 mb-0 lato-regular">
+          Ti risponderemo al più presto per confermare il preventivo!
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>

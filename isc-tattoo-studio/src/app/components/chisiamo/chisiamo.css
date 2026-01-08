@@ -1,0 +1,19 @@
+.hero-section {
+    position: relative;
+    height: 52vh;
+    background: url('/noi.jpg') center/cover no-repeat;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.48);
+    backdrop-filter: blur(1px);
+}
+
+.hero-content {
+    position: relative;
+    max-width: 800px;
+    z-index: 2;
+}
