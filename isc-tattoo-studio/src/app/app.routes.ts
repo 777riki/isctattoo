@@ -11,14 +11,14 @@ import { Gallery } from './components/gallery/gallery';
 import { Notfound } from './components/notfound/notfound';
 
 export const routes: Routes = [
-    {path: '/', component: Home},
+    {path: '', component: Home},
     {path: 'chisiamo', component: Chisiamo},
-    {path: '/artisti/isc', component: Isc},
-    {path: '/artisti/sketchomaule', component: Sketchomaule},
-    {path: '/artisti/laurazane', component: Laurazane},
-    {path: '/orario', component: Orario},
-    {path: '/prenotazioni', component: Prenotazioni},
-    {path: '/contatti', component: Contatti},
-    {path: '/gallery', component: Gallery},
+    {path: 'artisti/isc', component: Isc},
+    {path: 'artisti/sketchomaule', component: Sketchomaule},
+    {path: 'artisti/laurazane', component: Laurazane},
+    {path: 'orario', component: Orario},
+    {path: 'prenotazioni', component: Prenotazioni},
+    {path: 'contatti', component: Contatti},
+    {path: 'gallery', component: Gallery},
     {path: '**', component: Notfound}
 ];
