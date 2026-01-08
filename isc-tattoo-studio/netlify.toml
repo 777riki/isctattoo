@@ -1,3 +1,7 @@
+[build]
+  publish = "dist/my-app"
+  command = "ng build --prod --base-href=/"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
