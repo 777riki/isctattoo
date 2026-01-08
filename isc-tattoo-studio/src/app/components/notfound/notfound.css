@@ -1,23 +1,18 @@
-.notfound-section {
-    background-color: #f8f9fa; /* sfondo chiaro */
-}
-
-/* Titolo grande 404 */
 .notfound-section h1.display-1 {
-    color: #343a40; /* quasi nero */
+    color: black;
     font-size: 8rem;
 }
 
 /* Sottotitolo */
 .notfound-section h2 {
-    color: #495057;
+    color: black;
     font-size: 2rem;
 }
 
 /* Paragrafo */
 .notfound-section p {
     font-size: 1rem;
-    color: #6c757d;
+    color: black
 }
 
 /* Pulsante */
