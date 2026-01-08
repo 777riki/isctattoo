@@ -11,7 +11,11 @@ interface OpeningHours {
   templateUrl: './orario.html',
   styleUrl: './orario.css',
 })
-export class Orario {
+export class Orario implements OnInit {
+
+  ngOnInit(): void {
+    window.scroll(0,0);
+  }
 
   openingHours = signal<OpeningHours[]>([
     { day: 0, times: [] }, // Domenica

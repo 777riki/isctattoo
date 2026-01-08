@@ -12,6 +12,7 @@ export class Footer implements OnInit {
   currentYear: WritableSignal<number> = signal<number>(0);
 
   ngOnInit(): void {
+    window.scroll(0,0);
     this.currentYear.set(new Date().getFullYear());
   }
 

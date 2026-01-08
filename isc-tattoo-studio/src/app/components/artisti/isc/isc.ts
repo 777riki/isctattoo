@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-isc',
@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   templateUrl: './isc.html',
   styleUrl: './isc.css',
 })
-export class Isc {
+export class Isc implements OnInit {
+
+  ngOnInit(): void {
+    window.scroll(0,0);
+  }
 
 }

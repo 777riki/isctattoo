@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Mail } from '../../services/mail';
 import { FormsModule } from '@angular/forms';
 
@@ -8,7 +8,11 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './prenotazioni.html',
   styleUrl: './prenotazioni.css',
 })
-export class Prenotazioni {
+export class Prenotazioni implements OnInit {
+
+  ngOnInit(): void {
+    window.scroll(0,0);
+  }
 
   mailService: Mail = inject(Mail);
 

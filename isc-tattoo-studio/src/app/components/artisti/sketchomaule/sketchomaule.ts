@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sketchomaule',
@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   templateUrl: './sketchomaule.html',
   styleUrl: './sketchomaule.css',
 })
-export class Sketchomaule {
+export class Sketchomaule implements OnInit {
+
+  ngOnInit(): void {
+    window.scroll(0,0);
+  }
 
 }

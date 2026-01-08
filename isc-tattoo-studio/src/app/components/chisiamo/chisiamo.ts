@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-chisiamo',
@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   templateUrl: './chisiamo.html',
   styleUrl: './chisiamo.css',
 })
-export class Chisiamo {
+export class Chisiamo implements OnInit {
+
+  ngOnInit(): void {
+    window.scroll(0,0);
+  }
 
 }

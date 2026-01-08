@@ -1,0 +1,55 @@
+.notfound-section {
+    background-color: #f8f9fa; /* sfondo chiaro */
+}
+
+/* Titolo grande 404 */
+.notfound-section h1.display-1 {
+    color: #343a40; /* quasi nero */
+    font-size: 8rem;
+}
+
+/* Sottotitolo */
+.notfound-section h2 {
+    color: #495057;
+    font-size: 2rem;
+}
+
+/* Paragrafo */
+.notfound-section p {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+/* Pulsante */
+.notfound-section .btn {
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notfound-section .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .notfound-section h1.display-1 {
+        font-size: 6rem;
+    }
+    .notfound-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .notfound-section h1.display-1 {
+        font-size: 4.5rem;
+    }
+    .notfound-section h2 {
+        font-size: 1.5rem;
+    }
+    .notfound-section p {
+        font-size: 0.95rem;
+    }
+}

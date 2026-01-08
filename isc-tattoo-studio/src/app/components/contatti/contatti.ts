@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-contatti',
@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
   templateUrl: './contatti.html',
   styleUrl: './contatti.css',
 })
-export class Contatti {
+export class Contatti implements OnInit {
+
+  ngOnInit(): void {
+    window.scroll(0,0);
+  }
 
 }
