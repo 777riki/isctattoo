@@ -16,3 +16,8 @@ select.form-select {
     padding: 1.5rem;
   }
 }
+
+textarea {
+  height: 30vh;
+  resize: none;
+}
