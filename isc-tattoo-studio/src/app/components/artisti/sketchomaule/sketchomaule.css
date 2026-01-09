@@ -37,3 +37,7 @@
 .sketch-card:hover img {
   transform: scale(1.05);
 }
+
+.container, .container-fluid {
+  overflow-x: hidden;
+}
