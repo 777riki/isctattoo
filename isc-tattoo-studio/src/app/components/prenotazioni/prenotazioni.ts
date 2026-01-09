@@ -18,7 +18,33 @@ export class Prenotazioni implements OnInit {
   private public_key = "Uw3j_4-L01jNtTBjo";
 
   ngOnInit(): void {
-    window.scroll(0,0);
+    window.scroll(0, 0);
+  }
+
+  // Funzione per validare i campi
+  private validateFields(): string | null {
+    // Nome
+    if (!this.name.trim()) return 'Inserisci il nome';
+    if (this.name.trim().length < 3) return 'Il nome deve essere di almeno 3 caratteri';
+    if (!/^[A-Za-zÀ-ÖØ-öø-ÿ ]+$/.test(this.name)) return 'Il nome può contenere solo lettere e spazi';
+    if (this.name.length > 50) return 'Il nome è troppo lungo';
+    // Email
+    if (!this.email.trim()) return 'Inserisci l\'email';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(this.email)) return 'Email non valida';
+    if (this.email.length > 100) return 'Email troppo lunga';
+    // Telefono
+    if (!this.phone.trim()) return 'Inserisci il telefono';
+    if (!/^[0-9+\- ]{7,15}$/.test(this.phone)) return 'Telefono non valido';
+    // Dimensione
+    if (!this.dimension.trim()) return 'Inserisci la dimensione';
+    if (this.dimension.length > 50) return 'Dimensione troppo lunga';
+    // Posizione
+    if (!this.position.trim()) return 'Inserisci la posizione';
+    if (this.position.length > 50) return 'Posizione troppo lunga';
+    // Note (opzionale)
+    if (this.notes.length > 500) return 'Le note sono troppo lunghe';
+
+    return null; // tutto ok
   }
 
   name: string = '';
@@ -29,8 +55,9 @@ export class Prenotazioni implements OnInit {
   notes: string = '';
 
   async sendEmail() {
-    if (!this.name || !this.email || !this.phone || !this.dimension || !this.position) {
-      this.alertMessage = 'Devi compilare tutti i campi!';
+    const error = this.validateFields();
+    if (error) {
+      this.alertMessage = error;
       this.showAlert = true;
       return;
     };
