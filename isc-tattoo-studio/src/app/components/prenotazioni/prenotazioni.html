@@ -1,4 +1,15 @@
-<div class="container py-5 my-5 d-flex justify-content-center align-content-center" style="min-height: 80vh; flex-direction: column;">
+<div class="container py-5 my-5 d-flex justify-content-center align-content-center"
+  style="min-height: 80vh; flex-direction: column;">
+
+  @if(showAlert) {
+  <div class="alert-overlay">
+    <div class="alert-box">
+      <p class="montserrat-bold">{{ alertMessage }}</p>
+      <button (click)="closeAlert()" class="lato-regular text-black" style="background-color: #f0cd01;">OK</button>
+    </div>
+  </div>
+  }
+
   <!-- Titolo e descrizione -->
   <div class="text-center mb-5">
     <h1 class="fw-bold montserrat-bold">Invia una richiesta preventivo</h1>
@@ -15,25 +26,29 @@
           <!-- Nome -->
           <div class="mb-3">
             <label for="name" class="form-label lato-regular">Nome</label>
-            <input type="text" class="form-control lato-regular form-focus" id="name" [(ngModel)]="name" name="name" placeholder="Il tuo nome" required>
+            <input type="text" class="form-control lato-regular form-focus" id="name" [(ngModel)]="name" name="name"
+              placeholder="Il tuo nome" required>
           </div>
 
           <!-- Email -->
           <div class="mb-3">
             <label for="email" class="form-label lato-regular">Email</label>
-            <input type="email" class="form-control lato-regular form-focus" id="email" [(ngModel)]="email" name="email" placeholder="La tua email" required>
+            <input type="email" class="form-control lato-regular form-focus" id="email" [(ngModel)]="email" name="email"
+              placeholder="La tua email" required>
           </div>
 
           <!-- Telefono -->
           <div class="mb-3">
             <label for="phone" class="form-label lato-regular">Telefono</label>
-            <input type="tel" class="form-control lato-regular form-focus" id="phone" [(ngModel)]="phone" name="phone" placeholder="Il tuo numero di telefono" required>
+            <input type="tel" class="form-control lato-regular form-focus" id="phone" [(ngModel)]="phone" name="phone"
+              placeholder="Il tuo numero di telefono" required>
           </div>
 
           <!-- Dimensione tatuaggio -->
           <div class="mb-3">
             <label for="dimension" class="form-label lato-regular">Dimensione del tatuaggio</label>
-            <select class="form-select lato-regular form-focus" id="dimension" [(ngModel)]="dimension" name="dimension" required>
+            <select class="form-select lato-regular form-focus" id="dimension" [(ngModel)]="dimension" name="dimension"
+              required>
               <option value="" disabled selected>Seleziona dimensione</option>
               <option value="Piccolo">Piccolo</option>
               <option value="Medio">Medio</option>
@@ -45,7 +60,8 @@
           <!-- Posizione tatuaggio -->
           <div class="mb-3">
             <label for="position" class="form-label lato-regular">Posizione sul corpo</label>
-            <select class="form-select lato-regular form-focus" id="position" [(ngModel)]="position" name="position" required>
+            <select class="form-select lato-regular form-focus" id="position" [(ngModel)]="position" name="position"
+              required>
               <option value="" disabled selected>Seleziona posizione</option>
               <option value="Braccio">Braccio</option>
               <option value="Gamba">Gamba</option>
@@ -59,11 +75,13 @@
           <!-- Note opzionali -->
           <div class="mb-4">
             <label for="notes" class="form-label lato-regular">Note (allergie, preferenze…)</label>
-            <textarea class="form-control lato-regular form-focus" id="notes" [(ngModel)]="notes" name="notes" rows="4" placeholder="Inserisci eventuali note"></textarea>
+            <textarea class="form-control lato-regular form-focus" id="notes" [(ngModel)]="notes" name="notes" rows="4"
+              placeholder="Inserisci eventuali note"></textarea>
           </div>
 
           <!-- Bottone invio -->
-          <button type="submit" class="btn w-100 shadow-lg lato-regular rounded-pill" style="height: 50px; background-color: #f0cd01;">
+          <button type="submit" class="btn w-100 shadow-lg lato-regular rounded-pill"
+            style="height: 50px; background-color: #f0cd01;">
             <i class="mx-1 bi bi-send-fill"></i> <span>Invia richiesta</span>
           </button>
 
