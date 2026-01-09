@@ -28,3 +28,28 @@ body {
 .container, .container-fluid {
   overflow-x: hidden;
 }
+
+.staff-card {
+  background: #1c1c1c; /* sfondo scuro */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.staff-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.staff-overlay {
+  transition: opacity 0.3s ease;
+}
+
+.staff-card:hover .staff-overlay {
+  opacity: 1;
+}
+
+.staff-tags .badge {
+  font-size: 0.8rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 50px;
+  font-weight: 500;
+}
