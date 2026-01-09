@@ -29,3 +29,11 @@
     font-size: 1.1rem;
     opacity: 0.9;
 }
+
+.sketch-card img {
+  transition: transform 0.4s ease;
+}
+
+.sketch-card:hover img {
+  transform: scale(1.05);
+}
