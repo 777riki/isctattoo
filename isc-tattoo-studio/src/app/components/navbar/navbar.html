@@ -1,52 +1,112 @@
 <nav class="navbar navbar-expand-lg shadow-lg sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand mx-4 my-2" routerLink="/">
-      <img src="logo.jpg" style="height: 6vh" />
+
+    <!-- LOGO -->
+    <a class="navbar-brand mx-4 my-2" routerLink="/" (click)="closeNavbar()">
+      <img src="logo.jpg" alt="ISC Tattoo Studio" style="height: 6vh" />
     </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- TOGGLER -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <!-- MENU -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
       <ul class="navbar-nav">
+
         <li class="nav-item fw-bold lato-regular">
-          <a class="nav-link mx-4 my-2" routerLink="/"><i class="bi bi-house mx-1"></i> Home</a>
+          <a class="nav-link mx-4 my-2"
+             routerLink="/"
+             (click)="closeNavbar()">
+            <i class="bi bi-house mx-1"></i> Home
+          </a>
         </li>
 
         <li class="nav-item fw-bold lato-regular">
-          <a class="nav-link mx-4 my-2" routerLink="/chisiamo"><i class="bi bi-people mx-1"></i> Chi siamo</a>
+          <a class="nav-link mx-4 my-2"
+             routerLink="/chisiamo"
+             (click)="closeNavbar()">
+            <i class="bi bi-people mx-1"></i> Chi siamo
+          </a>
         </li>
 
+        <!-- DROPDOWN -->
         <li class="nav-item dropdown fw-bold lato-regular">
-          <a class="nav-link mx-4 my-2 dropdown-toggle" role="button" data-bs-toggle="dropdown"
-            aria-expanded="false">
+          <a class="nav-link mx-4 my-2 dropdown-toggle"
+             role="button"
+             data-bs-toggle="dropdown"
+             aria-expanded="false">
             <i class="bi bi-search mx-1"></i> Gli artisti
           </a>
+
           <ul class="dropdown-menu shadow-lg">
-            <li><a class="dropdown-item lato-regular" routerLink="/artisti/isc">Salvatore Caruso</a></li>
-            <li><a class="dropdown-item lato-regular" routerLink="/artisti/sketchomaule">Riccardo Maule</a></li>
-            <li><a class="dropdown-item lato-regular" routerLink="/artisti/laurazane">Laura Zanetti</a></li>
+            <li>
+              <a class="dropdown-item lato-regular"
+                 routerLink="/artisti/isc"
+                 (click)="closeNavbar()">
+                Salvatore Caruso
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item lato-regular"
+                 routerLink="/artisti/sketchomaule"
+                 (click)="closeNavbar()">
+                Riccardo Maule
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item lato-regular"
+                 routerLink="/artisti/laurazane"
+                 (click)="closeNavbar()">
+                Laura Zanetti
+              </a>
+            </li>
           </ul>
         </li>
 
         <li class="nav-item fw-bold lato-regular">
-          <a class="nav-link mx-4 my-2" routerLink="/orario"><i class="bi bi-clock mx-1"></i> Orari di apertura</a>
+          <a class="nav-link mx-4 my-2"
+             routerLink="/orario"
+             (click)="closeNavbar()">
+            <i class="bi bi-clock mx-1"></i> Orari di apertura
+          </a>
         </li>
 
         <li class="nav-item fw-bold lato-regular">
-          <a class="nav-link mx-4 my-2" routerLink="/prenotazioni"><i class="bi bi-calendar mx-1"></i> Prenota Online</a>
+          <a class="nav-link mx-4 my-2"
+             routerLink="/prenotazioni"
+             (click)="closeNavbar()">
+            <i class="bi bi-calendar mx-1"></i> Prenota Online
+          </a>
         </li>
 
         <li class="nav-item fw-bold lato-regular">
-          <a class="nav-link mx-4 my-2" routerLink="/contatti"><i class="bi bi-phone mx-1"></i> Contatti</a>
+          <a class="nav-link mx-4 my-2"
+             routerLink="/contatti"
+             (click)="closeNavbar()">
+            <i class="bi bi-phone mx-1"></i> Contatti
+          </a>
         </li>
 
         <li class="nav-item fw-bold lato-regular">
-          <a class="nav-link mx-4 my-2" routerLink="/gallery"><i class="bi bi-images mx-1"></i> Gallery</a>
+          <a class="nav-link mx-4 my-2"
+             routerLink="/gallery"
+             (click)="closeNavbar()">
+            <i class="bi bi-images mx-1"></i> Gallery
+          </a>
         </li>
+
       </ul>
     </div>
+
   </div>
 </nav>
