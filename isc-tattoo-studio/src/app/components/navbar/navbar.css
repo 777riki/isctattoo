@@ -7,3 +7,9 @@ nav {
     outline: none;
     box-shadow: none;
 }
+
+.nav-link {
+  white-space: nowrap;
+}
+
+

@@ -1,37 +1,54 @@
-.notfound-section h1.display-1 {
-    color: black;
-    font-size: 8rem;
+.notfound-section {
+    position: relative;
+    min-height: 90svh;
+    overflow: hidden;
 }
 
-/* Sottotitolo */
+.notfound-bg {
+    position: absolute;
+    font-size: clamp(12rem, 35vw, 30rem);
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.05);
+    line-height: 1;
+    user-select: none;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.notfound-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding: 2rem;
+}
+
+.notfound-section h1.display-1 {
+    font-size: 8rem;
+    letter-spacing: -0.05em;
+}
+
 .notfound-section h2 {
-    color: black;
     font-size: 2rem;
 }
 
-/* Paragrafo */
 .notfound-section p {
-    font-size: 1rem;
-    color: black
+    font-size: 1.05rem;
+    color: #cfcfcf;
+    line-height: 1.6;
 }
 
-/* Pulsante */
+/* PULSANTE */
 .notfound-section .btn {
-    padding: 0.75rem 2rem;
-    border-radius: 0.5rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f0cd01;
+    color: #000 !important;
 }
 
-.notfound-section .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .notfound-section h1.display-1 {
         font-size: 6rem;
     }
+
     .notfound-section h2 {
         font-size: 1.8rem;
     }
@@ -41,9 +58,11 @@
     .notfound-section h1.display-1 {
         font-size: 4.5rem;
     }
+
     .notfound-section h2 {
         font-size: 1.5rem;
     }
+
     .notfound-section p {
         font-size: 0.95rem;
     }
